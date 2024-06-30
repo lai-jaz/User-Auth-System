@@ -1,4 +1,3 @@
-<!--ADMIN FORM MAKE APPROPRIATE CHANGES-->
 <x-guest-layout>
     <form method="POST" action="{{ route('admin.register.store') }}">
         @csrf
