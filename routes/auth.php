@@ -20,7 +20,7 @@ Route::middleware('guest')->group(function () {
 
     Route::get('admin/register', [AdminRegisterController::class, 'create'])->name('admin.register');
 
-    Route::post('admin/register', [AdminRegisterController::class, 'store']);
+    Route::post('admin/register', [AdminRegisterController::class, 'store'])->name('admin.register.store');
 
     Route::get('login', [AuthenticatedSessionController::class, 'create'])
                 ->name('login');
@@ -62,3 +62,5 @@ Route::middleware('auth')->group(function () {
     Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->name('logout');
 });
+
+// force logout: in php artisan tinker -> DB::table('sessions')->where('user_id', 1)->delete(); 
