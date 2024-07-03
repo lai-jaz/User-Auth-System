@@ -12,7 +12,7 @@ class AdminPasswordSeeder extends Seeder
     {
         AdminPassword::create([
             'password' => Hash::make('your_admin_password'),
-            'active' => false, // change to true in db for test purposes
+            'active' => true,
         ]);
     }
 }

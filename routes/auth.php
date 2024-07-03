@@ -62,5 +62,3 @@ Route::middleware('auth')->group(function () {
     Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->name('logout');
 });
-
-// force logout: in php artisan tinker -> DB::table('sessions')->where('user_id', 1)->delete(); 
